@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import {AdvantagesIcons} from "./style.css";
 
 export const CardFeature = {
   Farm: "farm",
@@ -31,12 +31,12 @@ function AdvantagesIcon({ className = "", feature }) {
     }
   
     return options.text ? (
-      <span
-        className={`advantages-icon ${className}`}
+      <AdvantagesIcons
+        AdvantagesIcons={`advantages-icon ${className}`}
         style={{ backgroundColor: options.bgColor }}
       >
         {options.text}
-      </span>
+      </AdvantagesIcons>
     ) : null;
   }
   

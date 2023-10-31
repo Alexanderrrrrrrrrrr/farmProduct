@@ -1,4 +1,7 @@
-.advantages-icon {
+import styled from "styled-components";
+
+
+export const AdvantagesIcons = styled.span `
     display: block;
     height: 43px;
     padding: 8px 16px;
@@ -9,5 +12,5 @@
     box-sizing: border-box;
     border-radius: 8px 8px 8px 0;
     text-transform: uppercase;
-  }
+ `;
   

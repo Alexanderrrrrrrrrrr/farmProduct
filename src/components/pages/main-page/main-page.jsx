@@ -9,7 +9,7 @@ function MainPage({list}) {
   return (
     <>
       <About />
-      <AdvantagesList list={list} />
+      <AdvantagesList list={list}  />
     </>
   );
 }

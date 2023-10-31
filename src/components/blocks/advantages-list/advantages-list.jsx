@@ -1,28 +1,29 @@
 import React from "react";
-import Title from "../../ui/title/title";
+import Title, { TitleSize } from "../../ui/title/title";
 import Button from "../../ui/button/button";
-import "./style.css";
+import { Advantages, AdvantagesLists, AdvantagesItem } from "./style";
 import AdvantagesCard from "../../ui/advantages-card/advantages-card";
 import list from "../../../mocks/list";
+import { AppRoute } from "../../../const";
 
-function AdvantagesList() {
+function AdvantagesList({level}) {
   return list && list.length ? (
-    <section className="advantages">
-      <Title >Почему фермерские продукты лучше?</Title>
-      <ul className="advantages__list">
+    <Advantages >
+      <Title level={level} size={TitleSize.BIG}>Почему фермерские продукты лучше?</Title>
+      <AdvantagesLists>
         {list.map((li) => (
-          <li className="advantages__item" key="{li.id}">
+          <AdvantagesItem key="{li.id}">
             <AdvantagesCard
               title={li.title}
               owner={li.owner}
               isNegative={li.isNegative}
               image={li.image}
               about={li.about} />
-          </li>
+          </AdvantagesItem>
         ))}
-      </ul>
-      <Button>Купить</Button>
-    </section>
+      </AdvantagesLists>
+      <Button minWidth={353} link={AppRoute.ORDER}>Купить</Button>
+    </Advantages>
   ) : null;
 }
 
